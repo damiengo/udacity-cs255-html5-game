@@ -18,40 +18,16 @@
 // We've started things off for you by doing steps
 // (1) and (2).
 
-Weapon = Class.extend({
-    init: function() {
-        
-    }
-});
+Weapon = Class.extend({});
 
-MachineGun = Weapon.extend({
-    init: function() {
-        
-    }
-});
+MachineGun = Weapon.extend({});
 
 // YOUR CODE HERE
 
-ChainGun = Weapon.extend({
-    init: function() {
-        
-    }
-});
+ChainGun = Weapon.extend({});
 
-Entity = Class.extend({
-    init: function() {
-        
-    }
-});
+Entity = Class.extend({});
 
-Teleporter = Entity.extend({
-    init: function() {
-        
-    }
-});
+Teleporter = Entity.extend({});
 
-EnergyCanister = Entity.extend({
-    init: function() {
-        
-    }
-});
+EnergyCanister = Entity.extend({});
