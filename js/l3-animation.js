@@ -3,6 +3,7 @@
 
 var canvas = null;
 var ctx = null;
+var current = 0;
 var assets = ['/media/img/gamedev/robowalk/robowalk00.png',
               '/media/img/gamedev/robowalk/robowalk01.png',
               '/media/img/gamedev/robowalk/robowalk02.png',
@@ -45,6 +46,15 @@ var setup = function() {
     // Afterwards, call setInterval to run at a framerate of 30 frames 
     // per second, calling the animate function each time.
     // YOUR CODE HERE
+    var assetsLen = assets.ength;
+    for(var i=0 ; i<assetsLen ; i++) {
+        img = new Image();
+        img.onload = onImageLoad;
+        img.src = assets[i];
+        frames[i] = img;
+    }
+
+    setInterval(function(){ animate(); }, 33.3333);
 };
 
 var animate = function(){
@@ -58,6 +68,11 @@ var animate = function(){
     //ctx.clearRect(0,0,canvas.width, canvas.height);
   
     // YOUR CODE HERE
+    ctx.drawImage(frames[current], 0, 0);
+    current++;
+    if(current == frames.length) {
+        current = 0;
+    }
 };
 
 // We'll call your setup function in our test code, so
